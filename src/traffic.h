@@ -17,7 +17,6 @@ void GET_traffic()
   http.begin(url);
 
   Serial.println("Nearby traffic");
-  Serial.println(GET + nearby_1)
   int httpResponseCode = http.GET();
   if (httpResponseCode == 200)
   {
@@ -48,7 +47,7 @@ void POST_traffic(String led)
   http.addHeader("Content-Type", "application/json");
 
   DynamicJsonDocument doc(2048);
-    doc["code"] = "t0vmh"
+    doc["code"] = "t0vmh";
     doc["traffic"] = led;
   serializeJson(doc, json);
 
